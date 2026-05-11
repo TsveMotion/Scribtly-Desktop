@@ -1,38 +1,39 @@
-<h1 align="center">✍️ Scribtly Desktop</h1>
+<h1 align="center">🖥️ Scribtly Desktop</h1>
 
 <p align="center">
-  <strong>AI-powered script generator for content creators — runs 100% on your machine</strong>
+  <strong>Open-source desktop companion for <a href="https://scribtly.com">scribtly.com</a> — AI script generator that runs 100% locally</strong>
 </p>
 
 <p align="center">
-  <a href="https://scribtly.com"><img src="https://img.shields.io/badge/🌐_scribtly.com-live-2563eb?style=flat-square" alt="scribtly.com"></a>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white">
-  <img src="https://img.shields.io/badge/AI-OpenAI%20%7C%20Claude-412991?style=flat-square&logo=openai&logoColor=white">
+  <a href="https://scribtly.com"><img src="https://img.shields.io/badge/🌐_scribtly.com-web%20app-2563eb?style=flat-square" alt="scribtly.com"></a>
+  <img src="https://img.shields.io/badge/Python-3.10+-3776AB?style=flat-square&logo=python&logoColor=white">
+  <img src="https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey?style=flat-square">
+  <img src="https://img.shields.io/badge/License-MIT-yellow?style=flat-square">
   <img src="https://img.shields.io/badge/Status-In%20Development-orange?style=flat-square">
   <img src="https://img.shields.io/badge/Price-Free-brightgreen?style=flat-square">
-  <img src="https://img.shields.io/badge/License-MIT-yellow?style=flat-square">
+  <img src="https://img.shields.io/badge/Open%20Source-%E2%9D%A4-red?style=flat-square">
 </p>
 
 <p align="center">
-  <strong><a href="https://scribtly.com">Try the web app → scribtly.com</a></strong>
+  <strong><a href="https://scribtly.com">→ Try Scribtly on the web at scribtly.com</a></strong>
 </p>
 
 ---
 
-## ✨ What is this?
+## ✨ What is Scribtly Desktop?
 
-Scribtly Desktop is the offline, open-source companion to [scribtly.com](https://scribtly.com) — a tool that helps content creators generate high-quality, platform-specific scripts for YouTube, TikTok, Instagram Reels, and more.
+Scribtly Desktop is the open-source, offline-first desktop companion to [scribtly.com](https://scribtly.com) — the AI script generator for content creators. Same powerful script generation, but it runs entirely on your machine. No subscriptions. No cloud. No data leaves your device.
 
-Everything runs **locally on your machine**. No subscriptions. No cloud. No data ever leaves your device.
+**Bring your own API key. Your scripts stay yours.**
 
 ## 🔥 Features
 
-- **🎬 Script Generator** — Pick platform, hook style, tone, and length. AI writes the script
-- **📚 Script Library** — Browse, search, and manage all saved scripts locally with SQLite
-- **🗺 Roadmap Planner** *(extension)* — Plan topics, set content goals, visualise your schedule
-- **⚙️ Settings** — Configure your OpenAI or Anthropic key once. Stored locally only
-- **📄 PDF Export** — Export any script to PDF for sharing or printing
-- **🔒 100% Private** — No telemetry, no analytics, no external servers
+- **🎬 Script Generator** — Pick platform, hook style, tone, length — AI writes platform-specific scripts
+- **📚 Local Script Library** — Browse, search, and manage scripts in a local SQLite database
+- **🗺 Roadmap Planner** — Plan content topics, set goals, and visualise your schedule
+- **⚙️ Bring Your Own Key** — OpenAI GPT or Anthropic Claude — your key, stored locally only
+- **📄 PDF Export** — Export any script for sharing or printing
+- **🔒 100% Private** — No telemetry, no analytics, no servers. Ever.
 
 ## 🛠 Tech Stack
 
@@ -44,6 +45,7 @@ Everything runs **locally on your machine**. No subscriptions. No cloud. No data
 | AI | OpenAI GPT · Anthropic Claude |
 | Charts | Matplotlib |
 | PDF Export | ReportLab |
+| Architecture | OOP |
 
 ## 🚀 Getting Started
 
@@ -52,30 +54,52 @@ Everything runs **locally on your machine**. No subscriptions. No cloud. No data
 - Python 3.10+
 - An [OpenAI](https://platform.openai.com) or [Anthropic](https://console.anthropic.com) API key
 
+### Install & Run
+
 ```bash
-git clone https://github.com/tsvtnv/Scribtly.git
-cd Scribtly
+git clone https://github.com/tsvtnv/Scribtly-Desktop.git
+cd Scribtly-Desktop
 pip install -r requirements.txt
 python main.py
 ```
 
-Open **Settings** and paste your API key. Stored locally only.
+### API Key Setup
+
+Open **Settings** in the app and paste your API key. It is stored locally on your device only — never sent anywhere except the AI provider you chose.
 
 ## 🗓 Roadmap
 
-- [x] Script generator core (platform, tone, hook, style)
-- [x] Local script library with search
+- [x] Project architecture & database schema
+- [ ] Tkinter UI shell
+- [ ] Script generator core (platform, tone, hook, style)
+- [ ] Local script library with search
 - [ ] PDF export
 - [ ] Content roadmap planner
-- [ ] Packaged installer (`.exe` / `.app`)
+- [ ] Packaged installer (`.exe` / `.app` / `.AppImage`)
 - [ ] Offline model support (no API key required)
+
+## 🌐 Scribtly Web vs Desktop
+
+| Feature | [scribtly.com](https://scribtly.com) | Scribtly Desktop |
+|---------|-------------|------------------|
+| Hosting | Cloud (we run it) | Your machine |
+| API key | Managed for you | Bring your own |
+| Subscription | Yes | Free forever |
+| Privacy | Standard SaaS | 100% local |
+| Offline use | No | Yes |
 
 ## 🤝 Contributing
 
+Contributions welcome — this is community open source.
+
 1. Fork the repo
 2. Create a branch: `git checkout -b feat/your-feature`
-3. Commit: `git commit -m 'feat: add your feature'`
+3. Commit: `git commit -m "feat: add your feature"`
 4. Push and open a Pull Request
+
+## 🔒 Privacy
+
+All scripts and user data are stored in a local SQLite database. No analytics, no telemetry, no external servers — ever. The only network call is to your chosen AI provider (OpenAI or Anthropic) when you generate a script.
 
 ## 📄 License
 
@@ -85,5 +109,5 @@ MIT — free to use, modify, and distribute. See [LICENSE](LICENSE).
 
 <p align="center">
   Made by <a href="https://tsvweb.com"><strong>tsvweb.com</strong></a> · Birmingham, UK 🇬🇧<br>
-  <a href="https://scribtly.com">scribtly.com</a>
+  <a href="https://scribtly.com">scribtly.com</a> · the cloud version
 </p>
